@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "configuration_status": "draft",
+  "registry_ref": "assets/asset-registry.json",
+  "note": "组件引用与模板排版配置分离；主标题使用 HYQiHei-65S，副标题使用 HYQiHei-50S。具体字号、行距及行数由模板固定。",
+  "components": [
+    {
+      "component_id": "brand_logo",
+      "component_type": "fixed_image",
+      "asset_ref": {
+        "asset_id": "didi.chuxing.logo.horizontal.reverse",
+        "version": "1.0.0"
+      },
+      "editable_content": false,
+      "size_basis": "visible_content",
+      "preserve_content_aspect_ratio": true
+    },
+    {
+      "component_id": "brand_slogan_single_line",
+      "component_type": "fixed_image",
+      "asset_ref": {
+        "asset_id": "didi.chuxing.slogan.single-line.reverse",
+        "version": "1.0.0"
+      },
+      "editable_content": false,
+      "size_basis": "visible_content",
+      "preserve_content_aspect_ratio": true
+    },
+    {
+      "component_id": "activity_headline",
+      "component_type": "editable_text",
+      "content_binding": "title",
+      "font_ref": {
+        "asset_id": "didi.font.hyqihei.65s",
+        "version": "1.0.0"
+      },
+      "mapping_status": "user_confirmed"
+    },
+    {
+      "component_id": "activity_subtitle",
+      "component_type": "editable_text",
+      "content_binding": "subtitle",
+      "font_ref": {
+        "asset_id": "didi.font.hyqihei.50s",
+        "version": "1.0.0"
+      },
+      "mapping_status": "user_confirmed"
+    },
+    {
+      "component_id": "activity_details",
+      "component_type": "editable_text",
+      "content_binding": "details",
+      "font_ref": {
+        "asset_id": "didi.font.hyqihei.50s",
+        "version": "1.0.0"
+      },
+      "mapping_status": "proposed"
+    },
+    {
+      "component_id": "main_visual",
+      "component_type": "image",
+      "editable_content": true,
+      "source": "task_input",
+      "input_fields": [
+        "customImage",
+        "mainVisualRef"
+      ],
+      "required": true,
+      "note": "本包不绑定默认活动主视觉。使用本次任务图片地址，或接入方已登记的主视觉资产 ID 与版本。"
+    }
+  ],
+  "unbound_components": [
+    {
+      "component_id": "qrcode",
+      "reason": "由具体需求传入目标内容或二维码文件，无需将固定示例二维码作为通用品牌资产。"
+    }
+  ]
+}
